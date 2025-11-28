@@ -9,4 +9,10 @@ module.exports = merge(common, {
     minimize: false,
     minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      inject: "body",
+    })
+  ]
 });
