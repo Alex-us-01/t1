@@ -11,7 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   optimization: {
-    minimize: true,
+    minimize: false,
     minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
   },
   plugins: [
@@ -20,5 +20,13 @@ module.exports = {
       inject: 'body',
       filename: 'index.html'
     })
-  ]
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
 };
