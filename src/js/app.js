@@ -11,7 +11,7 @@ for (let i = 0; i < fieldSize * fieldSize; i++) {
 }
 
 // Character
-import goblinImage from './img/goblin.png';
+import goblinImage from '../../img/goblin.png';
 const character = document.createElement('img');
 character.src = goblinImage; // Используем импортированный путь
 character.alt = 'goblin';
