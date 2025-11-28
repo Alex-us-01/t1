@@ -11,7 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   optimization: {
-    minimize: false,
+    minimize: true,
     minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
   },
   plugins: [
