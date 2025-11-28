@@ -11,8 +11,13 @@ for (let i = 0; i < fieldSize * fieldSize; i++) {
 }
 
 // Character
+import goblinImage from './img/goblin.png';
 const character = document.createElement('img');
-character.src = './img/goblin.png';
+character.src = goblinImage; // Используем импортированный путь
+character.alt = 'goblin';
+document.body.appendChild(character);
+// const character = document.createElement('img');
+// character.src = './img/goblin.png';
 
 // Random number generator
 function getRandomInt(min, max) {
